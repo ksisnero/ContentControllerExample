@@ -2,8 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Example_2._0"
+             xmlns:viewmodels="clr-namespace:Example_2._0.ViewModels"
+             xmlns:views="clr-namespace:Example_2._0.Views"
+
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type viewmodels:IntroWindowViewModel}">
+            <views:IntroWindow/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:SuspectWindowViewModel}">
+            <views:SuspectWindow/>
+        </DataTemplate>
     </Application.Resources>
 </Application>

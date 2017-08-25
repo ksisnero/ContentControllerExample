@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Example_2._0"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <ContentControl Content="{Binding WindowSet.CurrentWindow}"/>
+        <Button Content="Button" Command="{Binding WindowSet.TransitionToCommand}" CommandParameter="{Binding SWindow}" HorizontalAlignment="Left" Margin="40,25,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
